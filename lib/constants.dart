@@ -15,7 +15,7 @@ const APP_DESCRIPTION = 'An app showcasing Flutter components, with '
     '\n\nDeveloped by X.Wei.';
 const GOOGLEPLAY_URL =
     'https://play.google.com/store/apps/details?id=io.github.x_wei.flutter_catalog';
-const GITHUB_URL = 'https://github.com/X-Wei/flutter_catalog';
+const GITHUB_URL = 'https://github.com/Tsiuryn/flutter_tutorial';
 const AUTHOR_SITE = 'http://x-wei.github.io';
 
 final kPlatformType = getCurrentPlatformType();

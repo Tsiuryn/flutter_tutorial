@@ -35,6 +35,7 @@ import 'routes/charts_heatmap_calendar_ex.dart';
 import 'routes/charts_pie_chart_ex.dart';
 import 'routes/charts_radar_chart_ex.dart';
 import 'routes/charts_time_series_ex.dart';
+import 'routes/animation_heart_widget_ex.dart';
 import 'routes/firebase_chatroom_ex.dart';
 import 'routes/firebase_login_ex.dart';
 import 'routes/firebase_mlkit_ex.dart';
@@ -623,6 +624,15 @@ const kMyAppRoutesBasic = <MyRouteGroup>[
         links: {
           'Tutorial by Robert Brunhage': 'https://youtu.be/vWBWfTgUaRI',
           'pub.dev': 'https://pub.dev/packages/animations',
+        },
+      ),
+      MyRoute(
+        child: AnimationHeartWidgetEx(),
+        sourceFilePath: 'lib/routes/animation_heart_widget_ex.dart',
+        title: '!Heart Beat Animation (new)',
+        description: 'From Flutter Animation',
+        links: {
+          'pub.dev - Animator': 'https://pub.dev/packages/animator',
         },
       ),
     ],
