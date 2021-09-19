@@ -1086,7 +1086,7 @@ const kMyAppRoutesPackage = <MyRouteGroup>[
   MyRouteGroup(groupName: 'Basic packages', icon: Icon(Icons.library_add_check), routes: <MyRoute>[
     MyRoute(
       child: PackageShare(),
-      sourceFilePath: '',
+      sourceFilePath: 'lib/routes/package_share.dart',
       title: 'Share plugin',
       description:
           'A Flutter plugin to share content from your Flutter app via the platform\'s share dialog.'
