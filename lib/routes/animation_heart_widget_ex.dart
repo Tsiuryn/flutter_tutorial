@@ -12,7 +12,7 @@ class AnimationHeartWidgetEx extends StatefulWidget {
 class _AnimationHeartWidgetExState extends State<AnimationHeartWidgetEx> {
   @override
   Widget build(BuildContext context) {
-    double _width = MediaQuery.of(context).size.width;
+    final double _width = MediaQuery.of(context).size.width;
     return Scaffold(
       body: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,

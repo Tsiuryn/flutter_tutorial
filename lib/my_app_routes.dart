@@ -3,6 +3,7 @@
 // ignore_for_file: sort_child_properties_last
 import 'package:flutter/material.dart';
 import 'package:flutter_catalog/routes/animation_animated_radial_menu_ex.dart';
+import 'package:flutter_catalog/routes/package_share.dart';
 
 import 'constants.dart';
 import 'home_page.dart';
@@ -14,6 +15,7 @@ import 'routes/animation_animated_icons_ex.dart';
 import 'routes/animation_animated_text_kit_ex.dart';
 import 'routes/animation_animated_widget_ex.dart';
 import 'routes/animation_animations_pkg_ex.dart';
+import 'routes/animation_heart_widget_ex.dart';
 import 'routes/animation_hero_ex.dart';
 import 'routes/animation_lottie_ex.dart';
 import 'routes/animation_low_level_ex.dart';
@@ -35,7 +37,6 @@ import 'routes/charts_heatmap_calendar_ex.dart';
 import 'routes/charts_pie_chart_ex.dart';
 import 'routes/charts_radar_chart_ex.dart';
 import 'routes/charts_time_series_ex.dart';
-import 'routes/animation_heart_widget_ex.dart';
 import 'routes/firebase_chatroom_ex.dart';
 import 'routes/firebase_login_ex.dart';
 import 'routes/firebase_mlkit_ex.dart';
@@ -135,6 +136,7 @@ const kAboutRoute = MyRoute(
 class MyRouteGroup {
   const MyRouteGroup(
       {required this.groupName, required this.icon, required this.routes});
+
   final String groupName;
   final Widget icon;
   final List<MyRoute> routes;
@@ -1073,17 +1075,31 @@ const kMyAppRoutesAdvanced = <MyRouteGroup>[
         description: 'Image labelling, text OCR, barcode scan, face detection.',
         links: {
           'pub.dev': 'https://pub.dev/packages/google_ml_kit',
-          'MLKit doc':
-              'https://developers.google.com/ml-kit/vision/text-recognition',
+          'MLKit doc': 'https://developers.google.com/ml-kit/vision/text-recognition',
         },
       ),
     ],
   ),
 ];
 
+const kMyAppRoutesPackage = <MyRouteGroup>[
+  MyRouteGroup(groupName: 'Basic packages', icon: Icon(Icons.library_add_check), routes: <MyRoute>[
+    MyRoute(
+      child: PackageShare(),
+      sourceFilePath: '',
+      title: 'Share plugin',
+      description:
+          'A Flutter plugin to share content from your Flutter app via the platform\'s share dialog.'
+              '\n Wraps the ACTION_SEND Intent on Android and UIActivityViewController on iOS.',
+      links: {'pub.dev': 'https://pub.dev/packages/share'},
+    )
+  ]),
+];
+
 final kAllRouteGroups = <MyRouteGroup>[
   ...kMyAppRoutesBasic,
   ...kMyAppRoutesAdvanced,
+  ...kMyAppRoutesPackage,
 ];
 
 final kAllRoutes = <MyRoute>[

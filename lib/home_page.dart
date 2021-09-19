@@ -28,6 +28,12 @@ class _MyHomePageState extends State<MyHomePage> {
       label: 'Advanced',
     ),
     BottomNavigationBarItem(
+      backgroundColor: Colors.blue,
+      icon: Icon(Icons.analytics_outlined),
+      label: 'Packages',
+    ),
+
+    BottomNavigationBarItem(
       backgroundColor: Colors.indigo,
       icon: Icon(Icons.star),
       label: 'Bookmarks',
@@ -46,6 +52,10 @@ class _MyHomePageState extends State<MyHomePage> {
       for (final MyRouteGroup group in kMyAppRoutesAdvanced)
         _myRouteGroupToExpansionTile(group),
     ];
+    final packageDemos = <Widget>[
+      for (final MyRouteGroup group in kMyAppRoutesPackage)
+        _myRouteGroupToExpansionTile(group),
+    ];
     final bookmarkAndAboutDemos = <Widget>[
       for (final MyRoute route
           in Provider.of<MyAppSettings>(context).starredRoutes)
@@ -58,6 +68,7 @@ class _MyHomePageState extends State<MyHomePage> {
         children: <Widget>[
           ListView(children: basicDemos),
           ListView(children: advancedDemos),
+          ListView(children: packageDemos),
           ListView(children: bookmarkAndAboutDemos),
         ],
       ),
